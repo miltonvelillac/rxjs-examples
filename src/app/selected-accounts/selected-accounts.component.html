@@ -1,0 +1,6 @@
+<form [formGroup]="form">
+  <label formArrayName="accounts" *ngFor="let account of form.controls.accounts.controls; let i = index">
+    <input type="checkbox" [formControlName]="i">
+    {{accounts[i].name}}
+  </label>
+</form>
